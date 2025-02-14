@@ -1,101 +1,67 @@
-import Image from "next/image";
+'use client';
+
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      <div className={`flex flex-col items-center justify-center min-h-screen p-4`}>
+      <section className="w-full max-w-4xl p-5 text-center">
+        <Image src="/logo.webp" alt="MSJH Logo" width={150} height={150} className="mx-auto"/>
+        <h1 className="text-xl mt-3 mb-0">MSJH.io</h1>
+        <section className="mt-4 text-left">
+          <h2 className="text-xl font-semibold">General:</h2>
+          <ul className="text-slate-700 list-disc pl-5 underline decoration-slate-500/30">
+            {[
+              {href: '/s', text: 'Countdown Schedule'},
+              {href: '/map', text: 'Campus Map'},
+              {href: '/school', text: 'School Homepage'},
+              {href: '/bell', text: 'Bell Schedule'},
+              {href: '/aeries', text: 'Student Aeries'},
+              {href: '/dates', text: 'Important Dates'},
+              {href: '/warriors', text: 'MSJ Instagram'},
+              {href: '/discord', text: 'School-Wide Discord Servers'},
+            ].map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} target="_blank"
+                        className="hover:underline hover:decoration-slate-500">{link.text}</Link>
+                </li>
+            ))}
+          </ul>
+        </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <section className="mt-6 text-left">
+          <h2 className="text-xl font-semibold">Student Activities</h2>
+          <ul className="text-slate-700 list-disc pl-5 underline decoration-slate-500/30">
+            {[
+              {href: '/asb', text: 'ASB Website'},
+              {href: '/ac', text: 'Academic Club Discord'},
+              {href: '/cs', text: 'CS Club Homepage'},
+              {href: '/cs/signup', text: 'CS Club Signup', indent: true},
+              {href: '/bio', text: 'Biology Club Discord'},
+              {href: '/ai', text: 'AI Club Discord'},
+              {href: '/math', text: 'Math Club Discord'},
+              {href: '/esports', text: 'E-Sports Club Discord'},
+              {href: '/jp', text: 'Japan Club Discord'},
+              {href: '/jp/signup', text: 'Japan Club Signup', indent: true},
+            ].map((link) => (
+                <li key={link.href} className={link.indent ? "ml-8" : ""}>
+                  <Link href={link.href} target="_blank"
+                        className="hover:underline hover:decoration-slate-500">{link.text}</Link>
+                </li>
+            ))}
+          </ul>
+        </section>
+
+        <footer className="mt-3 text-sm text-slate-500 w-full max-w-4xl text-center">
+          Do you have something you think should be linked here? You can find me on Discord
+          as <strong>@pokeshah</strong>
+          <br></br>
+          This website is <Link href="https://github.com/adrian154/MSJH.io" target="_blank"
+                                className="text-slate-700 decoration-slate-500/30 underline hover:decoration-slate-700">open-source</Link>. This webpage isn&#39;t
+          endorsed by the school or official in any way &copy; 2025
+        </footer>
+      </section>
     </div>
   );
 }
