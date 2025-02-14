@@ -5,37 +5,32 @@ import Image from "next/image";
 export default function Home() {
     return (
         <>
-                <title>MSJ Guerilla Gardening</title>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                <meta property="og:title" content="MSJ Guerilla Gardening"/>
-                <meta property="og:description" content="Making Mission a little prettier, one plant at a time"/>
-                <meta property="og:image" content="https://msjh.io/gardening/rose.png"/>
-                <style>
-                    {`
-                        div {
-                            max-width: 45em;
-                            margin: auto;
-                            margin-top: 2em;
-                            padding: 1em;
-                        }
+            <title>MSJ Guerilla Gardening</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <meta property="og:title" content="MSJ Guerilla Gardening"/>
+            <meta property="og:description" content="Making Mission a little prettier, one plant at a time"/>
+            <meta property="og:image" content="/rose.png"/>
+            <style>
+                {`
+                    div {
+                        max-width: 45em;
+                        margin: auto;
+                        margin-top: 2em;
+                        padding: 1em;
+                    }
 
-                        blockquote {
-                            margin: 0;
-                        }
+                    blockquote {
+                        margin: 0;
+                    }
 
-                        figure {
-                            margin: 0;
-                            padding: 1.5em;
-                            background-color: #eee;
-                        }
+                    figure {
+                        margin: 0;
+                        padding: 1.5em;
+                        background-color: #eee;
+                    }
 
                         figcaption {
                             text-align: right;
-                        }
-
-                        img {
-                            display: block;
-                            margin: auto;
                         }
                     `}
                 </style>
@@ -55,7 +50,7 @@ export default function Home() {
                 <p>plant a seed. water a flower. (avoid invasive species though&mdash;do your due diligence!)</p>
                 <p>tell your friends, too. and if you plant something, send us a picture! you can find Adrian on Discord as
                     drain#5012.</p>
-                <Image src="/qr-code.png" width={150} height={150} alt="QR code leading to this webpage"/>
+                <Image className="block mx-auto" src="/qr-code.png" width={150} height={150} alt="QR code leading to this webpage"/>
             </div>
         </>
     );
