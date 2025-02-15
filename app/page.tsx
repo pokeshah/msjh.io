@@ -5,7 +5,7 @@ export default function Home() {
   return (
       <div className={`flex flex-col items-center justify-center min-h-screen p-4`}>
       <section className="w-full max-w-4xl p-5 text-center">
-        <Image src="/favicon.ico" alt="MSJH Logo" width={150} height={150} className="mx-auto"/>
+        <Image unoptimized src="/favicon.ico" alt="MSJH Logo" width={150} height={150} className="mx-auto"/>
         <h1 className="text-xl mt-3 mb-0">MSJH.io</h1>
         <section className="mt-4 text-left">
           <h2 className="text-xl font-semibold">General:</h2>
