@@ -1,5 +1,5 @@
 import Head from "next/head";
-import "@/app/ui/globals.css";
+import "@/app/globals.css";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (

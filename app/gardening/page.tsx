@@ -1,8 +1,6 @@
-'use client';
-
 import Image from "next/image";
 
-export default function Home() {
+export default function gardening() {
     return (
         <>
             <title>MSJ Guerilla Gardening</title>

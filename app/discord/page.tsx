@@ -1,9 +1,7 @@
-'use client';
-
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function Home() {
+export default function discord() {
     return (
         <>
             <div className={`top-0 place-items-center flex-col items-center justify-center min-h-screen p-4`}>
