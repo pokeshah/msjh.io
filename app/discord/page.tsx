@@ -6,7 +6,7 @@ export default function discord() {
         <>
             <div className={`top-0 place-items-center flex-col items-center justify-center min-h-screen p-4`}>
                 <section className="w-full max-w-4xl p-5 text-center">
-                    <Image src="/logo.webp" alt="MSJH Logo" width={150} height={150} className="mx-auto"/>
+                    <Image src="/favicon.ico" alt="MSJH Logo" width={150} height={150} className="mx-auto"/>
                     <h1 className="text-xl mt-3 mb-0">MSJH.io</h1>
                     <section className="mt-4 text-left">
                         <h2 className="text-xl font-semibold">Links</h2>
