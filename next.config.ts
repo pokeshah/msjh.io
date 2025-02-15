@@ -1,6 +1,13 @@
-import type { NextConfig } from 'next';
+// @ts-check
+
+import {NextConfig} from "next";
+
+/**
+ * @type {import('next').NextConfig}
+ **/
 
 const nextConfig: NextConfig = {
+    output: "export",
     async redirects() {
         return [
             {
