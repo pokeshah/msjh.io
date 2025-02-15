@@ -30,7 +30,7 @@ export default function discord() {
                 Do you have something you think should be linked here? You can find me on Discord
                 as <strong>@pokeshah</strong>
                 <br></br>
-                This website is <Link href="https://github.com/adrian154/MSJH.io" target="_blank"
+                This website is <Link href="https://github.com/pokeshah/msjh.io" target="_blank"
                                       className="text-slate-700 decoration-slate-500/30 underline hover:decoration-slate-700">open-source</Link>.
                 This webpage isn&#39;t
                 endorsed by the school or official in any way &copy; 2025
