@@ -118,7 +118,7 @@ const ScheduleTimer = () => {
               <TabsList className="grid w-full grid-cols-3">
                 <TabsTrigger value="regular">M, T, W, F</TabsTrigger>
                 <TabsTrigger value="thursday">Thursday</TabsTrigger>
-                <TabsTrigger value="minimum">Minimum Day</TabsTrigger>
+                <TabsTrigger value="minimum">Minimum</TabsTrigger>
               </TabsList>
             </Tabs>
           </CardHeader>
